@@ -6,7 +6,12 @@ function HelloWorld({message}) {
 }
 
 HelloWorld.propTypes = {
-	message: PropTypes.string,
+	/** This is a sample description. */
+	message: PropTypes.string.isRequired
+};
+
+HelloWorld.defaultProps = {
+	message: "a default massage",
 };
 
 export default HelloWorld;
