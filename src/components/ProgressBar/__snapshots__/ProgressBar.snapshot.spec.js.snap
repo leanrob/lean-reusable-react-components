@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows a progress bar 1`] = `
+<div
+  style={
+    Object {
+      "border": "solid 1px lightgray",
+      "width": 50,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 5,
+        "width": 25,
+      }
+    }
+  />
+</div>
+`;
