@@ -53,7 +53,8 @@
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js",
+//    "test": "node scripts/test.js --env=jsdom",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build"
   },
