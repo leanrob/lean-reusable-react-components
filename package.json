@@ -108,6 +108,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "gh-pages": "^1.1.0",
     "npm-run-all": "^4.1.2",
+    "nyc": "^11.4.1",
     "react-addons-test-utils": "^15.6.2",
     "react-docgen": "^2.20.1",
     "react-test-renderer": "^16.2.0"
