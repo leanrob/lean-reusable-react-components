@@ -3,10 +3,8 @@ node_js:
   - "6"
   - "7"
   - "8"
-cache:
-  directories:
-  - node_modules
+install:
+  - npm install -g codecov
 script:
-  - nyc --reporter=lcov --reporter=text-lcov yarn test # Include coverage when running tests
-after_script: # Upload coverage reports
-  - COVERALLS_REPO_TOKEN=QNrphZfhlmbaEPclCL5dbnEkEMCCV01BB npm run coveralls
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - codecov --token=08ad1224-eea1-44cd-9f3d-646ef576ae9e
