@@ -3,7 +3,13 @@ node_js:
   - "6"
   - "7"
   - "8"
+cache:
+  directories:
+  - node_modules
 install:
   - npm install -g codecov
 script:
-  - codecov --token=08ad1224-eea1-44cd-9f3d-646ef576ae9e
+  - npm test -- --coverage # Include coverage when running tests
+  - npm run build
+after_script: # Upload coverage reports
+  - COVERALLS_REPO_TOKEN=QNrphZfhlmbaEPclCL5dbnEkEMCCV01BB npm run coveralls
