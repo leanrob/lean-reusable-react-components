@@ -6,4 +6,4 @@ node_js:
 install:
   - npm install -g codecov
 script:
-  - codecov --token=$CODECOVTOKEN
+  - codecov --token=08ad1224-eea1-44cd-9f3d-646ef576ae9e
